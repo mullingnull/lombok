@@ -278,7 +278,14 @@ public class ConfigurationKeys {
 	 * By default or if explicitly set to {@code true}, lombok will attempt to automatically singularize the name of your variable/parameter when using {@code @Singular}; the name is assumed to be written in english, and a plural. If explicitly to {@code false}, you must always specify the singular form; this is especially useful if your identifiers are in a foreign language.
 	 */
 	public static final ConfigurationKey<Boolean> SINGULAR_AUTO = new ConfigurationKey<Boolean>("lombok.singular.auto", "If true (default): Automatically singularize the assumed-to-be-plural name of your variable/parameter when using {@code @Singular}.") {}; 
-	
+
+	/**
+	 * lombok configuration: {@code lombok.peepin.flagUsage} = {@code WARNING} | {@code ERROR}.
+	 *
+	 * If set, <em>any</em> usage of {@code @Getter} results in a warning / error.
+	 */
+	public static final ConfigurationKey<FlagUsageType> PEEP_IN_FLAG_USAGE = new ConfigurationKey<FlagUsageType>("lombok.peepin.flagUsage", "Emit a warning or error if @PeepIn is used.") {};
+
 	// ##### Standalones #####
 	
 	// ----- Cleanup -----
